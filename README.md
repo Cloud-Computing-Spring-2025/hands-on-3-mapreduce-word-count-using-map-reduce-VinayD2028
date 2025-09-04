@@ -62,13 +62,13 @@ cd /opt/hadoop-3.2.1/share/hadoop/mapreduce/
 Create a folder in HDFS for the input dataset:
 
 ```bash
-hadoop fs -mkdir -p /input/dataset
+hadoop fs -mkdir -p /input/data
 ```
 
 Copy the input dataset to the HDFS folder:
 
 ```bash
-hadoop fs -put ./input.txt /input/dataset
+hadoop fs -put ./input.txt /input/data
 ```
 
 ### 8. **Execute the MapReduce Job**
@@ -76,7 +76,7 @@ hadoop fs -put ./input.txt /input/dataset
 Run your MapReduce job using the following command: Here I got an error saying output already exists so I changed it to output1 instead as destination folder
 
 ```bash
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/dataset/input.txt /output1
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/data/input.txt /output1
 ```
 
 ### 9. **View the Output**
@@ -123,7 +123,6 @@ To copy the output from HDFS to your local machine:
  ```bash
 Hadoop 3
 Hello 2
-is 2
 used 1
 for 1
 big 1
