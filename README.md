@@ -4,10 +4,9 @@
 This repository is designed to test MapReduce jobs using a simple word count dataset. In this project we provide a input file and then we create a maaper and reducer logic to count the occurence orf each word in the given input. There are sample input and Expected output for the sample input.
 
 ## Approach and implementation
-1. Mapper Logic: We use StringTokenizer to create tokens from the input file and loop it using while loop to map all the words in the input file with key value pairs.
+1. Mapper Logic: We use StringTokenizer to create tokens from the input file and loop it using while loop to map all the words in the input file with key value pairs. In this mapper, it will not count characters that are smaller than 3.
 
 2. Reducer Logic: Using the output of Mapper logic we increase a variable sum value as we encounter same words and retun them. this way we will get a list of words and the number of times it occured in the input file as output.
-
 
 ## Setup and Execution
 
@@ -105,11 +104,6 @@ To copy the output from HDFS to your local machine:
     ```
 3. Commit and push to your repo so that we can able to see your output
 
-## Challenges faced: 
- 1. faced difficulty in coming up with the correct syntax for the controller, mapper and reducer classes even when had a clear understaing of what should be done in each classes 
- Solution: Found the syntaxes in websites like Geek for Geeks
- 2. understanding the exception message and solving them.
- Solution: Discussed with friends and reached to conclusion as to what part was throwing the exceptions and fixed it.
 
 ## Sample Input: 
  ```bash
